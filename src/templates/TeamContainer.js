@@ -22,20 +22,20 @@ const TeamContainer = () => {
                   height
                 }
                 alt
-                copyright 
+                copyright
               }
               name {
                 text
               }
               description {
                 text
-              }  
+              }
             }
           }
         }
       }
     `
-  );
+  )
   const content = prismicAvatars.data.avatarsarr.map((avatar, index) =>
     <RadiusImage
       key={`avatar-${index}`}

@@ -11,7 +11,7 @@ import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 // import "./layout.css"
-import "material-design-icons/iconfont/material-icons.css";
+import "material-design-icons/iconfont/material-icons.css"
 import "../styles/main.scss"
 
 const Layout = ({ children }) => (
