@@ -1,0 +1,17 @@
+.sectionHeader {
+  h2 {
+    margin: 0;
+    text-align: center;
+    padding-bottom: 8px;
+  }
+  .column {
+    align-items: center;
+  }
+  .row {
+    justify-content: center;
+  }
+  hr {
+    width: 200px;
+    border: 2px solid #000;
+  }
+}

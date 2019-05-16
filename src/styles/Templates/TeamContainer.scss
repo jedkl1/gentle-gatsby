@@ -1,0 +1,11 @@
+.teamContainer {
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  .row {
+    justify-content: space-around;
+    .manWrapper {
+      min-width: 30%;
+    }
+  }
+}

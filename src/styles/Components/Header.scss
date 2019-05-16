@@ -1,0 +1,94 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 85vh;
+  background-size: cover;
+  transition: opacity 1s ease-in-out;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 24px;
+
+  .text_box {
+    backface-visibility: hidden;
+    span {
+      display: block;
+    }
+    .main {
+      letter-spacing: 6.5px;
+      text-transform: uppercase;
+      backface-visibility: hidden;
+      animation: moveTextInRight 1s ease-out;
+    }
+    .sub {
+      letter-spacing: 7px;
+      animation: moveTextInLeft 1s ease-out;
+    }
+  }
+  .arrow_expand {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    animation-fill-mode: backwards;
+    animation-name: moveArrowDown, moveArrowUpAndDown;
+    animation-duration: 1s, 1s;
+    animation-delay: 1s, 2s;
+    animation-iteration-count: 1, infinite;
+    animation-timing-function: ease-out;
+    .material-icons {
+      display: block;
+    }
+  }
+}
+
+@keyframes moveTextInRight {
+  0% {
+    transform: translateX(80px);
+    opacity: 0;
+  }
+  75% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes moveTextInLeft {
+  0% {
+    transform: translateX(-80px);
+    opacity: 0;
+  }
+  75% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes moveArrowDown {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes moveArrowUpAndDown {
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}

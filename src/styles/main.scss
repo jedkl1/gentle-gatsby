@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.container {
+  display: flex;
+}
+
+.row {
+  display: flex;
+  &.wrap {
+    flex-flow: row wrap;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.text {
+  &__normal {
+    font-weight: 400;
+  }
+  &__bold {
+    font-weight: 600;
+  }
+}
+
+.md-16 {
+  font-size: 1em;
+}
+
+.md-20 {
+  font-size: 1.25em;
+}
+.md-24 {
+  font-size: 1.5em;
+}
+.md-32 {
+  font-size: 2em;
+}
+.md-48 {
+  font-size: 3em;
+}
+.md-64 {
+  font-size: 4em;
+}

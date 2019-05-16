@@ -1,0 +1,24 @@
+.manWrapper {
+  color: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 16px;
+
+  .avatar {
+    border-radius: 50%;
+    padding: 8px;
+  }
+
+  span {
+    text-align: center;
+    max-width: 340px;
+  }
+  .text__bold {
+    padding-bottom: 8px;
+  }
+  .text__normal {
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,15 @@
+.strongPoint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: grey;
+  padding: 16px;
+  i {
+    padding: 16px;
+  }
+  span {
+    text-align: center;
+    max-width: 340px;
+  }
+}
