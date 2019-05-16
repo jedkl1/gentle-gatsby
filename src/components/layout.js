@@ -10,7 +10,10 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-// import "./layout.css"
+import TopBar from "../templates/TopBar"
+
+//import "./layout.css"
+import "../styles/Components/layout.scss"
 import "material-design-icons/iconfont/material-icons.css"
 import "../styles/main.scss"
 
@@ -26,22 +29,13 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
-        <Header siteTitle="tralalalalala" />
-        <div
-          style={{
-            padding: `0px 2em 2em`,
-            paddingTop: 0,
-          }}
-        >
-          <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
+      <div className={"layout"}>
+        <TopBar />
+        <main>{children}</main>
+        <div className="footer">
+          <span> &#9400; Gentle Expeditions 2016-2019 </span>
         </div>
-      </>
+      </div>
     )}
   />
 )

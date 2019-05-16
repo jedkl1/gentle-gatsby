@@ -1,0 +1,29 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  main {
+    display: flex;
+    flex-direction: column;
+    padding: 3.75em 0 2em;
+    overflow: auto;
+    height: calc(100% - 5.75em);
+  }
+
+  .footer,
+  .top {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    color: white;
+    background-color: #000;
+    position: fixed;
+    z-index: 2;
+  }
+
+  .footer {
+    height: 2em;
+    font-size: 1em;
+    justify-content: center;
+    bottom: 0;
+  }
+}

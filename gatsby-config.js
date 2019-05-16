@@ -1,10 +1,10 @@
-require("dotenv").config({ path: `.env.${process.env.NODE_ENV}` });
+require("dotenv").config({ path: `.env.${process.env.NODE_ENV}` })
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Home`,
+    description: `Witaj w świecie rowerowych wypraw. Jeśli chcesz przeżyć niezapomnianą przygodę zgłoś się do nas.`,
+    author: `@Gentle Expeditions`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -27,7 +27,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/gentle_logo-64x64.png`, // This path is relative to the root of the site.
       },
     },
     {
@@ -42,4 +42,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-};
+}

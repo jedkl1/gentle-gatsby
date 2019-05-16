@@ -23,8 +23,8 @@ const Header = () => {
       }
     `
   )
+  const screenWidth = window.innerWidth
   const data = prismicHeaderbackground.data
-  console.log(data)
   return (
     <div
       className="header"
@@ -37,8 +37,8 @@ const Header = () => {
       }}
     >
       <div className="text_box">
-        <span className="md-64 main"> {data.main_text.text} </span>
-        <span className="md-32 sub"> {data.submain_text.text} </span>
+        <span className={"main " + (screenWidth > 580 ? "md-64" : "md-32")}> {data.main_text.text} </span>
+        <span className={"sub " + (screenWidth > 580 ? "md-32" : "md-24")}> {data.submain_text.text} </span>
       </div>
       <div className="arrow_expand animated">
         <i className="material-icons md-64"> expand_more </i>
