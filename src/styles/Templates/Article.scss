@@ -1,0 +1,27 @@
+@import "../mixins.scss";
+
+.article {
+  padding: 8px;
+  @include xl {
+    padding: 32px 280px;
+  }
+  &__title {
+    font-size: 32px;
+    font-weight: 600;
+    padding: 8px 0;
+    @include lg {
+      font-size: 64px;
+    }
+  }
+  &__subtitle {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 0;
+    @include xl {
+      font-size: 32px;
+    }
+  }
+  &__content {
+
+  }
+}

@@ -40,6 +40,9 @@ const Header = () => {
         <span className={"main " + (screenWidth > 580 ? "md-64" : "md-32")}> {data.main_text.text} </span>
         <span className={"sub " + (screenWidth > 580 ? "md-32" : "md-24")}> {data.submain_text.text} </span>
       </div>
+      <a href="/expeditions/montenegro" className="button last__exp">
+        <span> Ostatnia wyprawa </span>
+      </a>
       <div className="arrow_expand animated">
         <i className="material-icons md-64"> expand_more </i>
       </div>

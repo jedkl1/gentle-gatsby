@@ -1,0 +1,51 @@
+@import "../mixins.scss";
+
+.content {
+  &__day {
+    padding: 16px 0;
+    &__header {
+      padding-bottom: 16px;
+      .header__text {
+        font-size: 24px;
+        font-weight: 600;
+      }
+      .header__date {
+        font-size: 20px;
+        color: #777;
+        font-style: italic;
+      }
+      .header__distance {
+        font-size: 20px;
+        font-weight: 500;
+        padding-left: 16px;
+      }
+    }
+    &__description {
+      .description__image {
+        max-width: calc(100vw - 2 * 8px);
+        max-height: calc(2/3 * (100vw - 2 * 8px));
+        @include lg {
+          max-width: 600px;
+          max-height: 400px;
+          &--right {
+            float: right;
+            padding-left: 16px;
+          }
+          &--left {
+            float: left;
+            padding-right: 16px;
+          }
+        }
+      }
+      .description__text {
+        &--first {
+          max-width: 100%;
+        }
+
+        p {
+          text-indent: 20px;
+        }
+      }
+    }
+  }
+}
