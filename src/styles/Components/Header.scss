@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 85vh;
+  height: 90vh;
   background-size: cover;
   transition: opacity 1s ease-in-out;
   background-position: top;
@@ -23,23 +23,21 @@
       letter-spacing: 6.5px;
       text-transform: uppercase;
       backface-visibility: hidden;
-      animation: moveTextInRight 1s ease-out;
+      animation: moveTextInRight 1s ease-out 1s;
+      animation-fill-mode: backwards;
     }
     .sub {
       letter-spacing: 7px;
-      animation: moveTextInLeft 1s ease-out;
+      animation: moveTextInLeft 1s ease-out 1s;
+      animation-fill-mode: backwards;
     }
   }
   .arrow_expand {
     display: block;
     position: absolute;
     bottom: 0;
-    animation-fill-mode: backwards;
-    animation-name: moveArrowDown, moveArrowUpAndDown;
-    animation-duration: 1s, 1s;
-    animation-delay: 1s, 2s;
-    animation-iteration-count: 1, infinite;
-    animation-timing-function: ease-out;
+    animation: 1s showArrow ease-out 2s, 1s infinite moveArrowDownAndUp ease-out 3s;
+    animation-fill-mode: backwards, forwards;
     .material-icons {
       display: block;
     }
@@ -74,23 +72,25 @@
   }
 }
 
-@keyframes moveArrowDown {
+@keyframes showArrow {
   0% {
+    transform: translateY(-40px);
     opacity: 0;
   }
   100% {
+    transform: translateY(0);
     opacity: 1;
   }
 }
 
-@keyframes moveArrowUpAndDown {
-  0% {
-    transform: translateY(-20px);
+@keyframes moveArrowDownAndUp {
+  1% {
+    transform: translateY(0);
   }
   50% {
-    transform: translate(0);
+    transform: translateY(20px);
   }
   100% {
-    transform: translateY(-20px);
+    transform: translateY(0);
   }
 }
