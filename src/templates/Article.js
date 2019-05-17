@@ -1,11 +1,20 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql,  } from "gatsby"
 
-const Article = ( props ) => {
-  const { allPrismicArticle } = useStaticQuery(
-    graphql`
-      query($slug: ${props.pageContext.slug}) {
-        allPrismicArticle(filter: { slug: { eq: $slug } }) {
+const Article = ( { data: { allPrismicArticle }  } ) => {
+
+  console.log(allPrismicArticle)
+  return (
+    <div>
+      adsadas
+    </div>
+  )
+}
+
+export const pageQuery =
+  graphql`
+      query($id: String!) {
+        allPrismicArticle(filter: { id: { eq: $id } }) {
           edges {
             node {
               id
@@ -23,13 +32,5 @@ const Article = ( props ) => {
         }
       }
     `
-  )
-  console.log(allPrismicArticle)
-  return (
-    <div>
-      adsadas
-    </div>
-  )
-}
 
 export default Article

@@ -32,7 +32,6 @@ exports.createPages = ({ graphql, actions }) => {
       }
     }
   `).then(result => {
-    console.log(result)
     result.data.allPrismicArticle.nodes.forEach(( node ) => {
       createPage({
         path: `expeditions/${node.slugs[0]}`,
@@ -41,7 +40,7 @@ exports.createPages = ({ graphql, actions }) => {
           // Data passed to context is available
           // in page queries as GraphQL variables.
           slug: node.slugs[0],
-          id: node.id
+          id: node.id,
         },
       })
     })
